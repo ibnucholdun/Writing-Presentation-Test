@@ -51,7 +51,7 @@
 
   GitHub adalah layanan web yang menyediakan layanan hosting untuk proyek yang menggunakan sistem pengontrol versi Git.
 
-- ### kenapa Git dan Github tools yang wajib digunakaan?
+- ### Kenapa Git dan Github tools yang wajib digunakaan?
 
   - Git dan Github sangat berguna untuk mengembangkan sebuah proyek yang bersifat kolaboratif.
   - Git dan Github sangat berguna untuk mengembangkan sebuah proyek yang bersifat mandiri.
@@ -68,7 +68,7 @@
 | 4. Menyediakan desktop interface bernama “Git GUI” | 4. Menggunakan nama desktop interface “GitHub Desktop” |
 | 5. _Open sourced licensed_                         | 5. Pilihan bagi pengguna gratis dan pengguna berbayar  |
 
-- ### alur kerja dari Git dan Github
+- ### Alur kerja dari Git dan Github
 
   - Git sendiri memiliki 3 status yaitu :
     - **Modified** : berarti file tersebut telah diubah atau di edit.
@@ -97,6 +97,60 @@
   - Command `git merge` => untuk menggabungkan branch lain ke branch yang sedang aktif
 
 ## HTML
+
+- ### Apa itu HTML?
+
+  HTML adalah singkatan dari _Hyper Text Markup Language_, yaitu sebuah bahasa markup yang digunakan untuk membuat struktur sebuah halaman web. HTML bukanlah bahasa pemrograman, namun merupakan bahasa markup yang digunakan untuk menandai elemen-elemen yang ada pada sebuah halaman web.
+
+- ### Apa fungsi HTML?
+
+  - HTML digunakan untuk menentukan struktur dari sebuah halaman web.
+  - HTML digunakan untuk menentukan tampilan dari sebuah halaman web.
+  - HTML digunakan untuk menentukan konten dari sebuah halaman web.
+  - HTML digunakan untuk menentukan aksi dari sebuah halaman web.
+
+- ### Tools pendukung dalam menggunakan HTML
+
+  - Text Editor (Visual Studio Code, Sublime Text, Atom, Notepad++, dll)
+  - Browser (Google Chrome, Mozilla Firefox, Opera, dll)
+
+- ### Struktur dasar HTML
+
+  - **DOCTYPE** `<!DOCTYPE>`: digunakan untuk mendefinisikan tipe dokumen HTML yang digunakan.
+  - **HTML** `<html>.....</html>`: digunakan untuk menandai bahwa dokumen HTML dimulai.
+  - **HEAD** `<head>.....</head>`: digunakan untuk menandai bagian kepala dokumen HTML.
+  - **BODY** `<body>.....</body>`: digunakan untuk menandai bagian isi dokumen HTML.
+
+- ### Tag dasar HTML
+
+  - **Heading** `<h1>.....</h1>`
+  - **Paragraph** `<p>.....</p>`
+  - **Image** `<img/>`
+  - **Link** `<a>.....</a>`
+  - **Order List** `<ol>.....</ol>`
+  - **Unorder List** `<ul>.....</ul>`
+  - **Table** `<table>.....</table>`
+  - **Form** `<form>.....</form>`
+  - **Input** `<input/>`
+  - **Button** `<button>.....</button>`
+  - **Div** `<div>.....</div>`
+  - **Span** `<span>.....</span>`
+
+- ### Tag Semantik HTML 5
+
+  - **Header** `<header>.....</header>`
+  - **Footer** `<footer>.....</footer>`
+  - **Main** `<main>.....</main>`
+  - **Section** `<section>.....</section>`
+  - **Article** `<article>.....</article>`
+  - **Aside** `<aside>.....</aside>`
+  - **Nav** `<nav>.....</nav>`
+  - **Figure** `<figure>.....</figure>`
+  - **Figcaption** `<figcaption>.....</figcaption>`
+
+- ### Deploy HTML
+
+  Deploy adalah sebuah proses untuk menyebarkan aplikasi yang sudah kita kerjakan supaya bisa digunakan oleh orang-orang. Jika aplikasi kita HTML atau Web App kita perlu mendeploy ke server. Untuk melakukan hal tersebut kita bisa menggunakan layanan gratis yang bernama Netlify, selain netlify ada juga layanan gratis lainnya seperti Heroku, Firebase, dll.
 
 ## CSS
 
