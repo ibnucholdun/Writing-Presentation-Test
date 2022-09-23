@@ -154,6 +154,65 @@
 
 ## CSS
 
+- ### Apa itu CSS?
+
+  CSS adalah singkatan dari _Cascading Style Sheets_, yaitu sebuah bahasa yang digunakan untuk membuat tampilan dari sebuah halaman web lebih menarik. CSS sama seperti HTML bukanlah bahasa pemrograman.
+
+- ### Apa fungsi CSS?
+
+  - CSS digunakan untuk menentukan tampilan dari sebuah halaman web.
+    - CSS digunakan untuk menentukan warna dari sebuah halaman web.
+  - CSS digunakan untuk menentukan font dari sebuah halaman web.
+  - CSS digunakan untuk menentukan ukuran dari sebuah halaman web.
+  - CSS digunakan untuk menentukan posisi dari sebuah halaman web.
+  - CSS digunakan untuk menentukan animasi dari sebuah halaman web.
+
+- ### Cara menyisipkan CSS ke dalam HTML
+
+  - Inline CSS
+    ```html
+    <h1 style="color: red;">Hello World</h1>
+    ```
+  - Internal CSS
+    ```html
+    <head>
+      <style>
+        h1 {
+          color: red;
+        }
+      </style>
+    </head>
+    ```
+  - External CSS
+    ```html
+    <head>
+      <link rel="stylesheet" href="style.css" />
+    </head>
+    ```
+
+- ### Menggunakan sintaks dasar dari CSS
+
+  - **Selector** `h1 {.....}` : digunakan untuk menentukan elemen mana yang akan diberi style.
+  - **Property** `color: red;` : digunakan untuk menentukan style apa yang akan diberikan.
+  - **Value** `color: red;` : digunakan untuk menentukan nilai dari style yang diberikan.
+  - **Comment** `/*.....*/` : digunakan untuk menambahkan komentar pada CSS.
+
+- ### Metode responsive web design menggunakan CSS
+
+  - **Media Query** : digunakan untuk menentukan style yang berbeda pada device yang berbeda.
+  - **Flexbox** : digunakan untuk menentukan layout yang responsive.
+  - **Grid** : digunakan untuk menentukan layout yang responsive.
+
+- ### Menggunakan flexbox
+  - **Flex Container** : digunakan untuk menentukan elemen mana yang akan menjadi flex container.
+  - **Flex Item** : digunakan untuk menentukan elemen mana yang akan menjadi flex item.
+  - **Flex Direction** : digunakan untuk menentukan arah dari flex container.
+  - **Flex Wrap** : digunakan untuk menentukan apakah flex item akan berpindah baris atau tidak.
+  - **Flex Flow** : digunakan untuk menentukan flex direction dan flex wrap.
+  - **Justify Content** : digunakan untuk menentukan posisi dari flex item secara horizontal.
+  - **Align Items** : digunakan untuk menentukan posisi dari flex item secara vertical.
+  - **Align Content** : digunakan untuk menentukan posisi dari flex item secara vertical jika terdapat lebih dari satu baris.
+
 ## Algoritma dan struktur data
 
 ## Javascript Dasar
