@@ -83,7 +83,7 @@
 
   dibawah ini merupakan beberapa command yang sering digunakan dalam git dan github.
 
-  - Command `git init` => untuk membuat repository baru
+  - Command `git init` => untuk membuat repository baru atau menginisialisasi direktory
   - Command `git remote add origin` => untuk menambahkan remote repository
   - Command `git add` => untuk menambahkan file baru
   - Command `git commit` => untuk menyimpan perubahan ke database
