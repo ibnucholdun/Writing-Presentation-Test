@@ -38,7 +38,7 @@
   - Command `cp` (_copy_) => untuk menyalin file atau direktori
   - Command `mv` (_move_) => untuk memindahkan file atau directori
   - Command `rm` (_remove_) => untuk menghapus file direktori
-  - Command `rmdir` (_remove directory_) => untuk menghapus direktori
+  - Command `rm -r` (_remove directory_) => untuk menghapus direktori
   - Command `clear` => untuk membersihkan layar terminal
 
 ## Git dan GitHub Dasar
