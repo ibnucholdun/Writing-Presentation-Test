@@ -215,4 +215,75 @@
 
 ## Algoritma dan struktur data
 
+- ### Apa itu algoritma?
+
+  Algoritma adalah sebuah langkah-langkah yang sistematis dan logis untuk menyelesaikan suatu masalah.
+
+- ### Apa itu struktur data?
+
+  Struktur data adalah sebuah cara untuk menyimpan atau mengolah agar mudah diakses.
+
+- ### Apa sih manfaat dari Algoritma dan Struktur data?
+
+  - **Algoritma** : memudahkan kita dalam menyelesaikan masalah
+  - **Struktur data** : memudahkan kita dalam mengolah data.
+
+- ### Apa saja sih ciri-ciri dari Algoritma?
+
+  - **Input** : Memiliki 0 atau lebih inputan
+  - **Output** : Memiliki 1 atau lebih output
+  - **Definiteness (Pasti)** : Setiap langkah harus jelas dan pasti
+  - **Finiteness (Ada batas)** : Memiliki titik berhenti (stop)
+  - **Effectiveness (Efektif)** : Sebisa mungkin tepat sasaran dan efisien
+
+- ### Apa saja jenis proses dari algoritma
+
+  - **Sequence** : langkah-langkah yang dilakukan berurutan
+  - **Selection** : langkah-langkah yang dilakukan berdasarkan kondisi
+  - **Repetition** : langkah-langkah yang dilakukan berulang-ulang
+
+- ### Apa saja penyajian dari algoritma
+
+  - **Descriptif** : penjelasan secara umum
+  - **Flowchart** : merupakan gambaran dari algoritma yang berupa diagram
+  - **Pseudocode** : merupakan penulisan algoritma dalam bahasa yang lebih mudah dimengerti
+
+- ### Contoh algoritma sederhana
+
+  - **Algoritma mencari Luas Persegi Panjang secara desctiptif**
+
+    ```
+        1. Deklarasikan variabel panjang dan lebar
+        2. Masukkan nilai panjang dan lebar persegi panjang
+        3. Hitung luas persegi panjang dengan rumus panjang x lebar
+        4. Tampilkan luas persegi panjang
+    ```
+
+  - **Algoritma mencari Luas Persegi Panjang secara flowchart**
+
+    ![flowchart](https://user-images.githubusercontent.com/96803344/192274918-b4b4cd8e-4620-4f59-8ef7-380b224d1ce6.png)
+
+  - **Algoritma mencari Luas Persegi Panjang secara pseudocode**
+
+    ```pseudocode
+    DEKLARASI
+        VAR panjang, lebar, luas : integer
+
+    ALGORITMA
+        panjang <- 10
+        lebar <- 5
+        luas <- panjang * lebar
+
+    DISPLAY luas
+    ```
+
+- ### Menerapkan algoritma ke dalam bahasa pemrograman javascript
+
+  ```javascript
+  let panjang = 10;
+  let lebar = 5;
+  let luas = panjang * lebar;
+  console.log(luas);
+  ```
+
 ## Javascript Dasar
