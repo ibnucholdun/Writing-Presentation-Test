@@ -75,9 +75,9 @@
     - **Staged** : berarti file tersebut telah siap untuk disimpan ke database Git.
     - **Committed** : berarti file tersebut telah disimpan ke database Git.
   - GitHub sendiri memiliki 3 status yaitu :
-    - **Working Directory** : berarti file tersebut telah diubah atau di edit.
-    - **Staging Area** : berarti file tersebut telah siap untuk disimpan ke database Git.
-    - **Git Directory** : berarti file tersebut telah disimpan ke database Git.
+    - **Working Directory** : direktori di mana pengguna saat ini bekerja.
+    - **Staging Area** : digunakan untuk melacak semua file yang nantinya akan di-Commit.
+    - **Git Directory** : di mana Git menyimpan metadata dan basis data obyek untuk proyek Anda
 
 - ### Command pada git dan github
 
