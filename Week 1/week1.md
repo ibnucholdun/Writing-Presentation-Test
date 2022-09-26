@@ -161,7 +161,7 @@
 - ### Apa fungsi CSS?
 
   - CSS digunakan untuk menentukan tampilan dari sebuah halaman web.
-    - CSS digunakan untuk menentukan warna dari sebuah halaman web.
+  - CSS digunakan untuk menentukan warna dari sebuah halaman web.
   - CSS digunakan untuk menentukan font dari sebuah halaman web.
   - CSS digunakan untuk menentukan ukuran dari sebuah halaman web.
   - CSS digunakan untuk menentukan posisi dari sebuah halaman web.
@@ -287,3 +287,192 @@
   ```
 
 ## Javascript Dasar
+
+- ### Apa itu Javascript?
+
+  Javascript adalah bahasa pemrograman yang digunakan untuk membuat website menjadi lebih interaktif.
+
+- ### Apa saja yang bisa dilakukan dengan Javascript?
+
+  - **Mengubah tampilan website** : dengan javascript kita bisa mengubah tampilan website sesuai dengan keinginan kita.
+  - **Membuat animasi** : dengan javascript kita bisa membuat animasi yang menarik.
+  - **Membuat interaksi** : dengan javascript kita bisa membuat interaksi antara user dan website.
+  - **Membuat game** : dengan javascript kita bisa membuat game yang menarik.
+
+- ### Bagaimana cara menggunakan javascript?
+
+  - **Inline** : menuliskan script langsung pada html
+    ```html
+    <button onclick="alert('Hello World!')">Click Me!</button>
+    ```
+  - **Internal** : menuliskan script pada file html
+
+    ```html
+    <script>
+      alert("Hello World!");
+    </script>
+    ```
+
+  - **External** : menuliskan script pada file javascript
+
+        ```html
+        <script src="script.js"></script>
+        ```
+
+- ### Tipe data pada javascript
+
+  - **Number** : tipe data yang berupa angka
+
+    contoh :
+
+    ```javascript
+    let angka = 10;
+    ```
+
+  - **String** : tipe data yang berupa teks
+
+    contoh :
+
+    ```javascript
+    let kata = "Hello World!";
+    ```
+
+  - **Boolean** : tipe data yang berupa true atau false
+
+    contoh :
+
+    ```javascript
+    let benar = true;
+    let salah = false;
+    ```
+
+  - **Array** : tipe data yang berupa kumpulan data
+
+    contoh :
+
+    ```javascript
+    let array = [1, 2, 3, 4, 5];
+    ```
+
+  - **Object** : tipe data yang berupa kumpulan data yang memiliki key dan value
+    contoh :
+    ```javascript
+    let object = {
+      nama: "John",
+      umur: 20,
+      pekerjaan: "Programmer",
+    };
+    ```
+
+- ### Operator pada javascript
+
+  - **Aritmatika** : operator yang digunakan untuk melakukan operasi matematika
+
+    | Operator | Keterangan  |
+    | -------- | ----------- |
+    | +        | Penjumlahan |
+    | -        | Pengurangan |
+    | \*       | Perkalian   |
+    | /        | Pembagian   |
+    | %        | Modulus     |
+
+  - **Perbandingan** : operator yang digunakan untuk membandingkan dua buah nilai
+
+    | Operator | Keterangan                        |
+    | -------- | --------------------------------- |
+    | ==       | Sama dengan                       |
+    | !=       | Tidak sama dengan                 |
+    | >        | Lebih besar dari                  |
+    | <        | Lebih kecil dari                  |
+    | >=       | Lebih besar dari atau sama dengan |
+    | <=       | Lebih kecil dari atau sama dengan |
+
+  - **Logika** : operator yang digunakan untuk menggabungkan dua buah kondisi
+
+    | Operator | Keterangan |
+    | -------- | ---------- |
+    | &&       | AND        |
+    | \|\|     | OR         |
+    | !        | NOT        |
+
+- ### Kondisi pada javascript
+
+  - **If** : kondisi yang digunakan untuk mengeksekusi kode jika kondisi bernilai true
+
+    ```javascript
+    if (kondisi) {
+      // kode yang akan dieksekusi jika kondisi bernilai true
+    }
+    ```
+
+  - **If else** : kondisi yang digunakan untuk mengeksekusi kode jika kondisi bernilai true dan mengeksekusi kode jika kondisi bernilai false
+
+    ```javascript
+    if (kondisi) {
+      // kode yang akan dieksekusi jika kondisi bernilai true
+    } else {
+      // kode yang akan dieksekusi jika kondisi bernilai false
+    }
+    ```
+
+  - **If else if** : kondisi yang digunakan untuk mengeksekusi kode jika kondisi bernilai true dan mengeksekusi kode jika kondisi bernilai false
+
+    ```javascript
+    if (kondisi1) {
+      // kode yang akan dieksekusi jika kondisi1 bernilai true
+    } else if (kondisi2) {
+      // kode yang akan dieksekusi jika kondisi2 bernilai true
+    } else {
+      // kode yang akan dieksekusi jika kondisi1 dan kondisi2 bernilai false
+    }
+    ```
+
+  - **Switch** : kondisi yang digunakan untuk mengeksekusi kode jika kondisi bernilai true
+
+    ```javascript
+    switch (kondisi) {
+      case "kondisi1":
+        // kode yang akan dieksekusi jika kondisi bernilai kondisi1
+        break;
+      case "kondisi2":
+        // kode yang akan dieksekusi jika kondisi bernilai kondisi2
+        break;
+      default:
+      // kode yang akan dieksekusi jika kondisi tidak bernilai kondisi1 dan kondisi2
+    }
+    ```
+
+  - **Ternary** : kondisi yang digunakan untuk mengeksekusi kode jika kondisi bernilai true dan mengeksekusi kode jika kondisi bernilai false
+
+    ```javascript
+    kondisi ? kode1 : kode2;
+    ```
+
+- ### Perulangan pada javascript
+
+  - **For** : Perulangan dimana kita tahu seberapa banyak nilai pasti untuk pengulangannya
+
+    ```javascript
+    for (let i = 0; i < 10; i++) {
+      // kode yang akan dieksekusi berulang kali
+    }
+    ```
+
+  - **While** : Perulangan dimana kita tidak tahu seberapa banyak nilai pasti untuk pengulangannya
+
+    ```javascript
+    let i = 0;
+    while (i < 10) {
+      // kode yang akan dieksekusi berulang kali
+      i++;
+    }
+    ```
+
+  - **Do while** : perulangan yang menjalankan pengulangan 1 kali sebelum dilakukan pengecekan kondisi
+    ```javascript
+    let i = 0;
+    do {
+      // kode yang akan dieksekusi berulang kali
+      i++;
+    } while (i < 10);
+    ```
