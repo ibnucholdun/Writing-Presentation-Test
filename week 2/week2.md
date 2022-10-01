@@ -355,30 +355,28 @@
     const parentElement = title.parentElement;
     ```
 
-- ### Cara mengakses DOM Node - Sibling
-
-  - Menggunakan Next Sibling
-    ```javascript
-    const title = document.getElementById("title");
-    const nextSibling = title.nextSibling;
-    ```
-  - Menggunakan Next Element Sibling
-    ```javascript
-    const title = document.getElementById("title");
-    const nextElementSibling = title.nextElementSibling;
-    ```
-  - Menggunakan Previous Sibling
-    ```javascript
-    const title = document.getElementById("title");
-    const previousSibling = title.previousSibling;
-    ```
-  - Menggunakan Previous Element Sibling
-    ```javascript
-    const title = document.getElementById("title");
-    const previousElementSibling = title.previousElementSibling;
-    ```
-
 ## Javascript Dasar - DOM - Traversing Element
+
+- Menggunakan Next Sibling
+  ```javascript
+  const title = document.getElementById("title");
+  const nextSibling = title.nextSibling;
+  ```
+- Menggunakan Next Element Sibling
+  ```javascript
+  const title = document.getElementById("title");
+  const nextElementSibling = title.nextElementSibling;
+  ```
+- Menggunakan Previous Sibling
+  ```javascript
+  const title = document.getElementById("title");
+  const previousSibling = title.previousSibling;
+  ```
+- Menggunakan Previous Element Sibling
+  ```javascript
+  const title = document.getElementById("title");
+  const previousElementSibling = title.previousElementSibling;
+  ```
 
 ## Javascript Dasar - DOM - Manipulating Elements
 
