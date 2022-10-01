@@ -461,4 +461,34 @@
 
 ## Javascript Dasar - DOM - Events
 
+- ### Cara menambahkan event pada DOM Node
+
+  - Menggunakan Event Listener
+    ```javascript
+    const title = document.getElementById("title");
+    title.addEventListener("click", function () {
+      console.log("Hello World");
+    });
+    ```
+  - Menggunakan Event Handler
+    ```javascript
+    const title = document.getElementById("title");
+    title.onclick = function () {
+      console.log("Hello World");
+    };
+    ```
+  - Menggunakan Event Handler - Multiple Event
+    ```javascript
+    const title = document.getElementById("title");
+    title.onclick = function () {
+      console.log("Hello World");
+    };
+    title.onmouseover = function () {
+      console.log("Hello World");
+    };
+    title.onmouseout = function () {
+      console.log("Hello World");
+    };
+    ```
+
 ## Javascript Dasar - DOM - Forms
