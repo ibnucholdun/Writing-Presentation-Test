@@ -397,12 +397,6 @@
     const title = document.getElementById("title");
     title.textContent = "Hello World";
     ```
-  - Menggunakan Style
-    ```javascript
-    const title = document.getElementById("title");
-    title.style.color = "red";
-    title.style.backgroundColor = "blue";
-    ```
   - Menggunakan Class List
     ```javascript
     const title = document.getElementById("title");
@@ -418,6 +412,52 @@
     ```
 
 ## Javascript Dasar - DOM - Manipulating Styles
+
+- ### Cara mengubah style DOM Node
+
+  - Menggunakan Style
+    ```javascript
+    const title = document.getElementById("title");
+    title.style.color = "red";
+    title.style.backgroundColor = "black";
+    title.style.fontSize = "50px";
+    ```
+  - Menggunakan CSS Text
+    ```javascript
+    const title = document.getElementById("title");
+    title.style.cssText =
+      "color: red; background-color: black; font-size: 50px;";
+    ```
+  - Menggunakan CSS File
+    ```css
+    /* style.css */
+    .red {
+      color: red;
+      background-color: black;
+      font-size: 50px;
+    }
+    ```
+    ```javascript
+    const title = document.getElementById("title");
+    title.classList.add("red");
+    ```
+  - Menggunakan CSS File - Multiple Class
+    ```css
+    /* style.css */
+    .red {
+      color: red;
+    }
+    .bg-black {
+      background-color: black;
+    }
+    .fs-50 {
+      font-size: 50px;
+    }
+    ```
+    ```javascript
+    const title = document.getElementById("title");
+    title.classList.add("red", "bg-black", "fs-50");
+    ```
 
 ## Javascript Dasar - DOM - Events
 
