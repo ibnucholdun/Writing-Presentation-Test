@@ -38,7 +38,7 @@
   - Command `cp` (_copy_) => untuk menyalin file atau direktori
   - Command `mv` (_move_) => untuk memindahkan file atau directori
   - Command `rm` (_remove_) => untuk menghapus file direktori
-  - Command `rmdir` (_remove directory_) => untuk menghapus direktori
+  - Command `rm -r` (_remove directory_) => untuk menghapus direktori
   - Command `clear` => untuk membersihkan layar terminal
 
 ## Git dan GitHub Dasar
@@ -75,15 +75,15 @@
     - **Staged** : berarti file tersebut telah siap untuk disimpan ke database Git.
     - **Committed** : berarti file tersebut telah disimpan ke database Git.
   - GitHub sendiri memiliki 3 status yaitu :
-    - **Working Directory** : berarti file tersebut telah diubah atau di edit.
-    - **Staging Area** : berarti file tersebut telah siap untuk disimpan ke database Git.
-    - **Git Directory** : berarti file tersebut telah disimpan ke database Git.
+    - **Working Directory** : direktori di mana pengguna saat ini bekerja.
+    - **Staging Area** : digunakan untuk melacak semua file yang nantinya akan di-Commit.
+    - **Git Directory** : di mana Git menyimpan metadata dan basis data obyek untuk proyek Anda
 
 - ### Command pada git dan github
 
   dibawah ini merupakan beberapa command yang sering digunakan dalam git dan github.
 
-  - Command `git init` => untuk membuat repository baru
+  - Command `git init` => untuk membuat repository baru atau menginisialisasi direktory
   - Command `git remote add origin` => untuk menambahkan remote repository
   - Command `git add` => untuk menambahkan file baru
   - Command `git commit` => untuk menyimpan perubahan ke database
