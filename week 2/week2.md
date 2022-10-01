@@ -282,6 +282,102 @@
 
 ## Javascript Dasar - DOM - Selecting Element
 
+- ### Cara mengakses DOM Node
+
+  - Menggunakan ID
+    ```javascript
+    const title = document.getElementById("title");
+    ```
+  - Menggunakan Class
+    ```javascript
+    const title = document.getElementsByClassName("title");
+    ```
+  - Menggunakan Tag Name
+    ```javascript
+    const title = document.getElementsByTagName("h1");
+    ```
+  - Menggunakan Query Selector
+    ```javascript
+    const title = document.querySelector("#title");
+    const title = document.querySelector(".title");
+    const title = document.querySelector("h1");
+    ```
+  - Menggunakan Query Selector All
+    ```javascript
+    const title = document.querySelectorAll("#title");
+    const title = document.querySelectorAll(".title");
+    const title = document.querySelectorAll("h1");
+    ```
+
+- ### Cara mengakses DOM Node - Child
+
+  - Menggunakan Child Nodes
+    ```javascript
+    const title = document.getElementById("title");
+    const childNodes = title.childNodes;
+    ```
+  - Menggunakan Children
+    ```javascript
+    const title = document.getElementById("title");
+    const children = title.children;
+    ```
+  - Menggunakan First Child
+    ```javascript
+    const title = document.getElementById("title");
+    const firstChild = title.firstChild;
+    ```
+  - Menggunakan First Element Child
+    ```javascript
+    const title = document.getElementById("title");
+    const firstElementChild = title.firstElementChild;
+    ```
+  - Menggunakan Last Child
+    ```javascript
+    const title = document.getElementById("title");
+    const lastChild = title.lastChild;
+    ```
+  - Menggunakan Last Element Child
+    ```javascript
+    const title = document.getElementById("title");
+    const lastElementChild = title.lastElementChild;
+    ```
+
+- ### Cara mengakses DOM Node - Parent
+
+  - Menggunakan Parent Node
+    ```javascript
+    const title = document.getElementById("title");
+    const parentNode = title.parentNode;
+    ```
+  - Menggunakan Parent Element
+    ```javascript
+    const title = document.getElementById("title");
+    const parentElement = title.parentElement;
+    ```
+
+- ### Cara mengakses DOM Node - Sibling
+
+  - Menggunakan Next Sibling
+    ```javascript
+    const title = document.getElementById("title");
+    const nextSibling = title.nextSibling;
+    ```
+  - Menggunakan Next Element Sibling
+    ```javascript
+    const title = document.getElementById("title");
+    const nextElementSibling = title.nextElementSibling;
+    ```
+  - Menggunakan Previous Sibling
+    ```javascript
+    const title = document.getElementById("title");
+    const previousSibling = title.previousSibling;
+    ```
+  - Menggunakan Previous Element Sibling
+    ```javascript
+    const title = document.getElementById("title");
+    const previousElementSibling = title.previousElementSibling;
+    ```
+
 ## Javascript Dasar - DOM - Traversing Element
 
 ## Javascript Dasar - DOM - Manipulating Elements
