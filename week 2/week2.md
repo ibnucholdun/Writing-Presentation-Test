@@ -261,6 +261,25 @@
 
 ## Javascript Dasar - DOM - Introduction
 
+- ### Apa itu Document Object Model (DOM)?
+
+  Document Object Model (DOM) adalah sebuah interface yang memungkinkan kita untuk mengakses dan memanipulasi elemen HTML dan CSS. DOM menyediakan sebuah API yang memungkinkan kita untuk mengubah struktur halaman web, style, dan konten. DOM juga menyediakan sebuah API untuk membuat aplikasi yang interaktif dan menarik.
+
+- ### Apa itu DOM Tree?
+
+  DOM Tree adalah sebuah struktur data yang merepresentasikan struktur halaman web. DOM Tree terdiri dari node-node yang saling berhubungan. Setiap node memiliki tipe yang berbeda. Nodetipe element disebut element node. Node tipe text disebut text node. Node tipe comment disebut comment node. Node tipe document disebut document node. Node tipe attribute disebut attribute node.
+
+- ### Apa itu DOM Node?
+
+  DOM Node adalah sebuah objek yang merepresentasikan sebuah elemen HTML atau CSS. DOM Node memiliki properti dan metode yang dapat digunakan untuk mengakses dan memanipulasi elemen HTML atau CSS. DOM Node memiliki tipe yang berbeda. Tipe dari DOM Node dapat dilihat pada gambar di bawah ini.
+
+- ### Apa manfaat DOM?
+  - Memanipulasi elemen HTML dan CSS
+  - Mengubah struktur halaman web
+  - Mengubah style halaman web
+  - Mengubah konten halaman web
+  - Membuat aplikasi yang interaktif dan menarik
+
 ## Javascript Dasar - DOM - Selecting Element
 
 ## Javascript Dasar - DOM - Traversing Element
