@@ -32,6 +32,73 @@
 
 ## Javascript Dasar - Function
 
+- ### Apa itu Function?
+
+  Function adalah sebuah blok kode yang berisi kumpulan algoritma tertentu yang dapat dipanggil kapan saja. Function dapat menerima parameter dan mengembalikan nilai. Function dapat dipanggil kapan saja dan berulang kali. Function dapat dipanggil di dalam function lain, sehingga dapat mempermudah dalam pengembangan program. Function dapat dideklarasikan dengan menggunakan keyword function.
+
+- ### Apa itu Parameter dan Argument?
+
+  Parameter adalah sebuah variabel yang digunakan untuk menerima nilai dari function yang dipanggil. Argument adalah sebuah nilai yang dikirimkan ke function saat dipanggil. Argument akan disimpan di dalam parameter. Jumlah parameter dan argument harus sama. Jika jumlah parameter dan argument tidak sama, maka akan terjadi error.
+
+  - Contoh 1
+
+    ```javascript
+    function sayHello(name) {
+      console.log(`Hello ${name}`);
+    }
+
+    sayHello("John");
+    ```
+
+  - Contoh Defaul Parameter
+
+    ```javascript
+    function sayHello(name = "John") {
+      console.log(`Hello ${name}`);
+    }
+
+    sayHello();
+    ```
+
+- ### Apa itu Return?
+
+  Return adalah sebuah keyword yang digunakan untuk mengembalikan nilai dari function. Return akan menghentikan eksekusi function. Jika tidak ada return, maka function akan mengembalikan nilai undefined.
+
+- ### Jenis-jenis Function?
+
+  Function dapat dibagi menjadi 2 yaitu Function Declaration dan Function Expression dan untuk di ES6 terdapat jenis Function baru yaitu Arrow Function.
+
+  - Function Declaration
+
+    Function Declaration adalah sebuah function yang dideklarasikan dengan menggunakan keyword function. Function Declaration dapat dipanggil sebelum dideklarasikan.
+    Contoh:
+
+    ```javascript
+    function sayHello() {
+      console.log("Hello World");
+    }
+    ```
+
+  - Function Expression
+
+    Function Expression adalah sebuah function yang dideklarasikan dengan menggunakan keyword function. Function Expression tidak dapat dipanggil sebelum dideklarasikan. Contoh:
+
+    ```javascript
+    const sayHello = function () {
+      console.log("Hello World");
+    };
+    ```
+
+  - Arrow Function
+
+    Arrow Function adalah sebuah function yang dideklarasikan dengan menggunakan tanda panah (=>). Arrow Function tidak memiliki keyword this. Contoh:
+
+    ```javascript
+    const sayHello = () => {
+      console.log("Hello World");
+    };
+    ```
+
 ## Javascript Dasar - Data Type Built-in - Prototype and Method
 
 ## Javascript Dasar - DOM - Introduction
