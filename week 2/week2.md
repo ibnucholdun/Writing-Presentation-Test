@@ -492,3 +492,63 @@
     ```
 
 ## Javascript Dasar - DOM - Forms
+
+- ### Cara mengakses DOM Node - Form
+
+  - Menggunakan Form
+    ```javascript
+    const form = document.getElementById("form");
+    ```
+  - Menggunakan Form - Input
+    ```javascript
+    const form = document.getElementById("form");
+    const input = form.input;
+    ```
+  - Menggunakan Form - Input - Value
+    ```javascript
+    const form = document.getElementById("form");
+    const input = form.input;
+    const value = input.value;
+    ```
+  - Menggunakan Form - Input - Type
+    ```javascript
+    const form = document.getElementById("form");
+    const input = form.input;
+    const type = input.type;
+    ```
+  - Menggunakan Form - Input - Placeholder
+    ```javascript
+    const form = document.getElementById("form");
+    const input = form.input;
+    const placeholder = input.placeholder;
+    ```
+  - Menggunakan Form - Input - Checked
+    ```javascript
+    const form = document.getElementById("form");
+    const input = form.input;
+    const checked = input.checked;
+    ```
+  - Menggunakan Form - Input - Disabled
+    ```javascript
+    const form = document.getElementById("form");
+    const input = form.input;
+    const disabled = input.disabled;
+    ```
+  - Menggunakan Form - Input - Required
+    ```javascript
+    const form = document.getElementById("form");
+    const input = form.input;
+    const required = input.required;
+    ```
+  - Menggunakan Form - Input - Max Length
+    ```javascript
+    const form = document.getElementById("form");
+    const input = form.input;
+    const maxLength = input.maxLength;
+    ```
+  - Menggunakan Form - Input - Min Length
+    ```javascript
+    const form = document.getElementById("form");
+    const input = form.input;
+    const minLength = input.minLength;
+    ```
