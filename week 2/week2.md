@@ -380,6 +380,43 @@
 
 ## Javascript Dasar - DOM - Manipulating Elements
 
+- ### Cara mengubah DOM Node
+
+  - Menggunakan Inner HTML
+    ```javascript
+    const title = document.getElementById("title");
+    title.innerHTML = "Hello World";
+    ```
+  - Menggunakan Inner Text
+    ```javascript
+    const title = document.getElementById("title");
+    title.innerText = "Hello World";
+    ```
+  - Menggunakan Text Content
+    ```javascript
+    const title = document.getElementById("title");
+    title.textContent = "Hello World";
+    ```
+  - Menggunakan Style
+    ```javascript
+    const title = document.getElementById("title");
+    title.style.color = "red";
+    title.style.backgroundColor = "blue";
+    ```
+  - Menggunakan Class List
+    ```javascript
+    const title = document.getElementById("title");
+    title.classList.add("red");
+    title.classList.remove("red");
+    title.classList.toggle("red");
+    ```
+  - Menggunakan Attributes
+    ```javascript
+    const title = document.getElementById("title");
+    title.setAttribute("id", "title");
+    title.removeAttribute("id");
+    ```
+
 ## Javascript Dasar - DOM - Manipulating Styles
 
 ## Javascript Dasar - DOM - Events
