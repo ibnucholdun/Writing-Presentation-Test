@@ -6,6 +6,7 @@
 - [Javascript Intermediate - Object](#javascript-intermediate---object)
 - [Javascript Intermediate - Recursive dan Import Export Module](#javascript-intermediate---recursive-dan-import-export-module)
 - [Javascript Intermediate - Asynchronous](#javascript-intermediate---asynchronous)
+- [Javascript Intermediate - Web Storage](#javascript-intermediate---web-storage)
 
 ## Javascript Intermediate - Array dan Multidimensional Array
 
@@ -537,3 +538,86 @@
       ```
 
 ## Javascript Intermediate - Asynchronous
+
+- ### Apa itu Asynchronous?
+  Asynchronous adalah sebuah proses dimana kita dapat menjalankan beberapa proses secara bersamaan tanpa harus menunggu proses sebelumnya selesai.
+  ```javascript
+  console.log("Hello");
+  setTimeout(() => {
+    console.log("World");
+  }, 1000);
+  console.log("!");
+  ```
+  Output:
+  ```
+  Hello
+  !
+  World
+  ```
+- ### Callback
+  Callback adalah sebuah fungsi yang akan dijalankan setelah fungsi lain selesai dijalankan.
+  ```javascript
+  function hello(callback) {
+    setTimeout(() => {
+      console.log("Hello");
+      callback();
+    }, 1000);
+  }
+  function world() {
+    console.log("World");
+  }
+  hello(world);
+  ```
+  Output:
+  ```
+  Hello
+  World
+  ```
+- ### Promise
+  Promise adalah sebuah fungsi yang akan dijalankan setelah fungsi lain selesai dijalankan. Promise memiliki 3 state yaitu pending, fulfilled, dan rejected.
+  ```javascript
+  function hello() {
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        console.log("Hello");
+        resolve();
+      }, 1000);
+    });
+  }
+  function world() {
+    console.log("World");
+  }
+  hello().then(world);
+  ```
+  Output:
+  ```
+  Hello
+  World
+  ```
+- ### Async Await
+  Async await adalah sebuah cara untuk menulis kode asynchronous yang lebih mudah dibaca.
+  ```javascript
+  function hello() {
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        console.log("Hello");
+        resolve();
+      }, 1000);
+    });
+  }
+  function world() {
+    console.log("World");
+  }
+  async function main() {
+    await hello();
+    world();
+  }
+  main();
+  ```
+  Output:
+  ```
+  Hello
+  World
+  ```
+
+## Javascript Intermediate - Web Storage
