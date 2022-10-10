@@ -621,3 +621,34 @@
   ```
 
 ## Javascript Intermediate - Web Storage
+
+- ### Apa itu Web Storage?
+  Web storage adalah sebuah cara untuk menyimpan data di browser. Web storage memiliki 2 jenis yaitu local storage dan session storage. Local storage akan menyimpan data di browser dan data tersebut akan tetap ada meskipun browser ditutup. Sedangkan session storage akan menyimpan data di browser dan data tersebut akan hilang jika browser ditutup.
+  - #### Local Storage
+    ```javascript
+    localStorage.setItem("name", "Ibnu");
+    localStorage.setItem("age", 20);
+    localStorage.setItem("address", "Jakarta");
+    console.log(localStorage.getItem("name")); // Ibnu
+    console.log(localStorage.getItem("age")); // 20
+    console.log(localStorage.getItem("address")); // Jakarta
+    localStorage.removeItem("name");
+    localStorage.removeItem("age");
+    localStorage.removeItem("address");
+    ```
+  - #### Session Storage
+    ```javascript
+    sessionStorage.setItem("name", "Ibnu");
+    sessionStorage.setItem("age", 20);
+    sessionStorage.setItem("address", "Jakarta");
+    console.log(sessionStorage.getItem("name")); // Ibnu
+    console.log(sessionStorage.getItem("age")); // 20
+    console.log(sessionStorage.getItem("address")); // Jakarta
+    sessionStorage.removeItem("name");
+    sessionStorage.removeItem("age");
+    sessionStorage.removeItem("address");
+    ```
+- ### Apa itu Cookie?
+  Cookie adalah sebuah cara untuk menyimpan data di browser. Cookie akan menyimpan data di browser dan data tersebut akan tetap ada meskipun browser ditutup.
+- ### Apa perbedaan Web Storage dan Cookie?
+  Perbedaan antara web storage dan cookie adalah web storage menyimpan data dalam bentuk key value, sedangkan cookie menyimpan data dalam bentuk string. Web storage hanya dapat menyimpan data dalam bentuk string, sedangkan cookie dapat menyimpan data dalam bentuk string, number, dan boolean. Web storage memiliki ukuran yang lebih besar dibandingkan cookie. Web storage memiliki waktu expired yang dapat diatur, sedangkan cookie memiliki waktu expired yang tidak dapat diatur. Web storage dapat diakses menggunakan javascript, sedangkan cookie tidak dapat diakses menggunakan javascript.
