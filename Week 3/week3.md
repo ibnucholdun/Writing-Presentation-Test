@@ -1,4 +1,4 @@
-# <p align="center">Summary Writing Week 2</p>
+# <p align="center">Summary Writing Week 3</p>
 
 ## Table of contents
 
