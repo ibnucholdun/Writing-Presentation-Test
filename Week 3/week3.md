@@ -289,6 +289,193 @@
 
 ## Javascript Intermediate - Object
 
+- ### Apa itu Object?
+  Object adalah sebuah variabel yang berisi banyak nilai. Object juga disebut sebagai _collection of properties_. Object memiliki _key_ dan _value_. _Key_ adalah nama dari _value_ yang ada di dalam object. _Value_ adalah nilai dari _key_ yang ada di dalam object. Object dibuat dengan menggunakan kurung kurawal `{}`.
+  ```javascript
+  let obj = {
+    key1: "value1",
+    key2: "value2",
+    key3: "value3",
+  };
+  ```
+  - ### Membuat Object
+    ```javascript
+    let car = {
+      type: "Fiat",
+      model: "500",
+      color: "white",
+    };
+    ```
+  - ### Mengakses Object
+    Terdapat dua cara untuk mengakses object, yaitu dengan menggunakan _dot notation_ dan _bracket notation_.
+    - #### Dot Notation
+      ```javascript
+      let car = {
+        type: "Fiat",
+        model: "500",
+        color: "white",
+      };
+      console.log(car.type); // Fiat
+      console.log(car.model); // 500
+      console.log(car.color); // white
+      ```
+    - #### Bracket Notation
+      ```javascript
+      let car = {
+        type: "Fiat",
+        model: "500",
+        color: "white",
+      };
+      console.log(car["type"]); // Fiat
+      console.log(car["model"]); // 500
+      console.log(car["color"]); // white
+      ```
+  - ### Mengubah Object
+    ```javascript
+    let car = {
+      type: "Fiat",
+      model: "500",
+      color: "white",
+    };
+    car.type = "Honda";
+    car.model = "Civic";
+    car.color = "black";
+    console.log(car);
+    ```
+  - ### Menghapus Object
+    ```javascript
+    let car = {
+      type: "Fiat",
+      model: "500",
+      color: "white",
+    };
+    delete car.type;
+    delete car.model;
+    delete car.color;
+    console.log(car);
+    ```
+  - ### Nested Object
+    Nested object adalah object yang berisi object lainnya.
+    ```javascript
+    let car = {
+      type: "Fiat",
+      model: "500",
+      color: "white",
+      owner: {
+        name: "Ibnu",
+        age: 20,
+      },
+    };
+    console.log(car.owner.name); // Ibnu
+    console.log(car.owner.age); // 20
+    ```
+  - ### Object Methode
+    Object methode adalah sebuah fungsi yang ada di dalam object.
+    ```javascript
+    let car = {
+      type: "Fiat",
+      model: "500",
+      color: "white",
+      start: function () {
+        console.log("The car has started");
+      },
+    };
+    car.start(); // The car has started
+    ```
+  - ### Looping pada object
+    Berikut adalah beberapa cara looping pada object.
+    - #### for in
+      ```javascript
+      let car = {
+        type: "Fiat",
+        model: "500",
+        color: "white",
+      };
+      for (let i in car) {
+        console.log(i);
+      }
+      ```
+    - #### for of
+      ```javascript
+      let car = {
+        type: "Fiat",
+        model: "500",
+        color: "white",
+      };
+      for (let i of Object.keys(car)) {
+        console.log(i);
+      }
+      ```
+    - #### forEach
+      ```javascript
+      let car = {
+        type: "Fiat",
+        model: "500",
+        color: "white",
+      };
+      Object.keys(car).forEach((i) => {
+        console.log(i);
+      });
+      ```
+    - #### map
+      ```javascript
+      let car = {
+        type: "Fiat",
+        model: "500",
+        color: "white",
+      };
+      let car2 = Object.keys(car).map((i) => {
+        return i;
+      });
+      console.log(car2);
+      ```
+    - #### filter
+      ```javascript
+      let car = {
+        type: "Fiat",
+        model: "500",
+        color: "white",
+      };
+      let car2 = Object.keys(car).filter((i) => {
+        return i == "type";
+      });
+      console.log(car2);
+      ```
+    - #### reduce
+      ```javascript
+      let car = {
+        type: "Fiat",
+        model: "500",
+        color: "white",
+      };
+      let car2 = Object.keys(car).reduce((acc, cur) => {
+        return acc + cur;
+      });
+      console.log(car2);
+      ```
+  - ### Array of Object
+    Array of object adalah array yang berisi object.
+    ```javascript
+    let cars = [
+      {
+        type: "Fiat",
+        model: "500",
+        color: "white",
+      },
+      {
+        type: "Honda",
+        model: "Civic",
+        color: "black",
+      },
+    ];
+    console.log(cars[0].type); // Fiat
+    console.log(cars[0].model); // 500
+    console.log(cars[0].color); // white
+    console.log(cars[1].type); // Honda
+    console.log(cars[1].model); // Civic
+    console.log(cars[1].color); // black
+    ```
+
 ## Javascript Intermediate - Recursive dan Import Export Module
 
 ## Javascript Intermediate - Asynchronous
