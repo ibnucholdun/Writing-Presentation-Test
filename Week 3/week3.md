@@ -478,4 +478,62 @@
 
 ## Javascript Intermediate - Recursive dan Import Export Module
 
+- ### Apa itu Recursive?
+  Recursive adalah sebuah fungsi yang memanggil dirinya sendiri.
+  ```javascript
+  function recursive() {
+    recursive();
+  }
+  recursive();
+  ```
+- ### Recursive dengan kondisi
+
+  ```javascript
+  function recursive(num) {
+    if (num === 0) {
+      return;
+    }
+    console.log(num);
+    recursive(num - 1);
+  }
+  recursive(5);
+  ```
+
+  - ### Import Export Module
+    Import export module adalah sebuah cara untuk membagi kode menjadi beberapa file. Dengan menggunakan import export module, kita dapat membagi kode menjadi beberapa file sehingga kode menjadi lebih rapi dan mudah untuk di maintain. Berikut adalah cara menggunakan import export module.
+    - #### Export
+      ```javascript
+      // file 1
+      export const name = "Ibnu";
+      export const age = 20;
+      export const address = "Jakarta";
+      ```
+      ```javascript
+      // file 2
+      export default function () {
+        console.log("Hello World");
+      }
+      ```
+    - #### Import
+      ```javascript
+      // file 1
+      import { name, age, address } from "./file1.js";
+      console.log(name); // Ibnu
+      console.log(age); // 20
+      console.log(address); // Jakarta
+      ```
+      ```javascript
+      // file 2
+      import hello from "./file2.js";
+      hello(); // Hello World
+      ```
+    - #### Import All
+      ```javascript
+      // file 1
+      import * as file1 from "./file1.js";
+      console.log(file1.name); // Ibnu
+      console.log(file1.age); // 20
+      console.log(file1.address); // Jakarta
+      ```
+
 ## Javascript Intermediate - Asynchronous
