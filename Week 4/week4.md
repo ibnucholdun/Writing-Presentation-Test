@@ -53,6 +53,26 @@
 
 ## Javascript Intermediate - Asynchronous - Async Await
 
+- ### Async Await
+
+  Async Await adalah cara untuk menulis kode asynchronous yang lebih mudah dibaca dan ditulis. Async Await merupakan syntactic sugar dari Promise. Async Await memungkinkan kita untuk menulis kode asynchronous seperti kode synchronous. Async Await sama seperti Promise, hanya saja Async Await lebih mudah dibaca dan ditulis.
+
+  - #### Contoh penggunaan Async Await
+
+    ```javascript
+    async function getData() {
+      const response = await fetch(
+        "https://jsonplaceholder.typicode.com/users"
+      );
+      const data = await response.json();
+      console.log(data);
+    }
+    ```
+
+    - `async function getData()` : membuat function getData() menjadi asynchronous
+    - `await fetch("https://jsonplaceholder.typicode.com/users")` : menunggu fetch selesai untuk kemudian menjalankan baris selanjutnya
+    - `await response.json()` : menunggu response.json() selesai untuk kemudian menjalankan baris selanjutnya
+
 ## Git dan Github Lanjutan
 
 ## Responsive Web Design
