@@ -183,4 +183,62 @@ Kolaborasi adalah sebuah fitur yang ada di Github yang berfungsi untuk mengundan
 
 ## Responsive Web Design
 
+Responsive Web Design adalah sebuah teknik yang digunakan untuk membuat sebuah website agar dapat menyesuaikan tampilan website sesuai dengan ukuran layar yang digunakan. Responsive Web Design dapat dilakukan dengan menggunakan CSS Media Query.
+
+- #### CSS Media Query
+
+  CSS Media Query adalah sebuah aturan CSS yang digunakan untuk menentukan tampilan website sesuai dengan ukuran layar yang digunakan.
+
+  ```css
+  @media screen (max-width: 600px) {
+    /* CSS disini akan dijalankan ketika ukuran layar maksimal 600px */
+  }
+  ```
+
+  - `@media screen` : aturan CSS Media Query
+  - `(max-width: 600px)` : aturan CSS Media Query yang digunakan untuk menentukan ukuran layar maksimal 600px
+
+  ```css
+  @media screen (min-width: 600px) {
+    /* CSS disini akan dijalankan ketika ukuran layar minimal 600px */
+  }
+  ```
+
+  - `@media screen` : aturan CSS Media Query
+  - `(min-width: 600px)` : aturan CSS Media Query yang digunakan untuk menentukan ukuran layar minimal 600px
+
+    ```css
+    @media screen (min-width: 600px) and (max-width: 900px) {
+      /* CSS disini akan dijalankan ketika ukuran layar minimal 600px dan maksimal 900px */
+    }
+    ```
+
+    - `@media screen` : aturan CSS Media Query
+    - `(min-width: 600px) and (max-width: 900px)` : aturan CSS Media Query yang digunakan untuk menentukan ukuran layar minimal 600px dan maksimal 900px
+
+- #### Macam-macam satuan relatif yang digunakan untuk responsive
+  - #### `em`
+
+    Satuan `em` adalah satuan yang digunakan untuk mengukur ukuran font. Satuan `em` merupakan satuan yang paling umum digunakan untuk responsive.
+
+  - #### `rem`
+
+    Satuan `rem` adalah satuan yang digunakan untuk mengukur ukuran font. Satuan `rem` merupakan satuan yang paling umum digunakan untuk responsive.
+
+  - #### `vw`
+
+    Satuan `vw` adalah satuan yang digunakan untuk mengukur ukuran layar. Satuan `vw` merupakan satuan yang paling umum digunakan untuk responsive.
+
+  - #### `vh`
+
+    Satuan `vh` adalah satuan yang digunakan untuk mengukur ukuran layar. Satuan `vh` merupakan satuan yang paling umum digunakan untuk responsive.
+
+  - #### `vmin`
+
+    Satuan `vmin` adalah satuan yang digunakan untuk mengukur ukuran layar. Satuan `vmin` merupakan satuan yang paling umum digunakan untuk responsive.
+
+  - #### `vmax`
+
+    Satuan `vmax` adalah satuan yang digunakan untuk mengukur ukuran layar. Satuan `vmax` merupakan satuan yang paling umum digunakan untuk responsive.
+
 ## Bootstrap 5
