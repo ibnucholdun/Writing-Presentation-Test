@@ -56,7 +56,7 @@ Functional component adalah sebuah komponen yang dibuat menggunakan function bai
   const App = () => {
     return (
       <div>
-        <h1>Hello, Ibnu CHolduhn</h1>
+        <h1>Hello, Ibnu Choldun</h1>
       </div>
     );
   };
@@ -65,6 +65,135 @@ Functional component adalah sebuah komponen yang dibuat menggunakan function bai
   ```
 
 ## React.js Basic - Props dan State
+
+### Props
+
+Props adalah sebuah object yang berisi data yang akan digunakan pada komponen. Props dapat diterima oleh komponen sebagai parameter. Props dapat diterima oleh functional component maupun class component. Props dapat digunakan pada JSX yang di return oleh functional component maupun class component. Props dapat digunakan untuk mengirimkan data dari parent component ke child component. props dapat ditulis meggunakan decturcturing object.
+
+- contoh props
+
+  ```javascript
+  import React from "react";
+
+  const App = (props) => {
+    return (
+      <div>
+        <h1>Hello, {props.name}</h1>
+      </div>
+    );
+  };
+
+  export default App;
+  ```
+
+  ```javascript
+  import React from "react";
+  import App from "./App";
+
+  const App = () => {
+    return (
+      <div>
+        <App name="Ibnu Choldun" />
+      </div>
+    );
+  };
+  ```
+
+- contoh props menggunakan decturcturing object
+
+  ```javascript
+  import React from "react";
+
+  const App = ({ name }) => {
+    return (
+      <div>
+        <h1>Hello, {name}</h1>
+      </div>
+    );
+  };
+
+  export default App;
+  ```
+
+  ```javascript
+  import React from "react";
+  import App from "./App";
+
+  const App = () => {
+    return (
+      <div>
+        <App name="Ibnu Choldun" />
+      </div>
+    );
+  };
+  ```
+
+### State
+
+State adalah sebuah object yang berisi data yang akan digunakan pada komponen. State dapat diterima oleh komponen sebagai parameter. State dapat diterima oleh class component. State dapat digunakan pada JSX yang di return oleh class component. State dapat digunakan untuk mengirimkan data dari parent component ke child component. State dapat ditulis meggunakan decturcturing object. State juga dapat digunakan pada functional component menggunakan hooks. State dapat digunakan untuk mengubah data pada komponen.
+
+- contoh state
+
+  ```javascript
+  import React, { Component } from "react";
+
+  class App extends Component {
+    state = {
+      name: "Ibnu Choldun",
+    };
+
+    render() {
+      return (
+        <div>
+          <h1>Hello, {this.state.name}</h1>
+        </div>
+      );
+    }
+  }
+
+  export default App;
+  ```
+
+- contoh state menggunakan decturcturing object
+
+  ```javascript
+  import React, { Component } from "react";
+
+  class App extends Component {
+    state = {
+      name: "Ibnu Choldun",
+    };
+
+    render() {
+      const { name } = this.state;
+      return (
+        <div>
+          <h1>Hello, {name}</h1>
+        </div>
+      );
+    }
+  }
+
+  export default App;
+  ```
+
+- contoh state menggunakan hooks
+
+  ```javascript
+  import React, { useState } from "react";
+
+  const App = () => {
+    const [name, setName] = useState("Ibnu Choldun");
+
+    return (
+      <div>
+        <h1>Hello, {name}</h1>
+      </div>
+    );
+  };
+
+  export default App;
+  ```
 
 ## React.js Basic - Styling
 
