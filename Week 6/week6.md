@@ -378,4 +378,48 @@ Life cycle method pada React.js adalah method yang akan dijalankan pada saat ter
 
 ## React.js Basic - Hooks
 
+### Hooks pada React.js
+
+Hooks pada React.js adalah function yang dapat digunakan pada functional component. Hooks pada React.js adalah function yang dapat digunakan pada functional component untuk menggantikan class component. Hooks pada React.js adalah function yang dapat digunakan pada functional component untuk menggantikan class component yaitu useState, useEffect, useContext, useReducer, useCallback, useMemo, useRef, useImperativeHandle, useLayoutEffect, dan useDebugValue.
+
+- contoh hooks useEffect pada React.js
+
+  ```javascript
+  import React, { useState, useEffect } from "react";
+
+  const App = () => {
+    const [name, setName] = useState("Ibnu Choldun");
+
+    useEffect(() => {
+      console.log("Hello, Ibnu Choldun");
+    }, []);
+
+    return (
+      <div>
+        <h1>Hello, {name}</h1>
+      </div>
+    );
+  };
+
+  export default App;
+  ```
+
+- contoh hooks useState pada React.js
+
+  ```javascript
+  import React, { useState } from "react";
+
+  const App = () => {
+    const [name, setName] = useState("Ibnu Choldun");
+
+    return (
+      <div>
+        <h1>Hello, {name}</h1>
+      </div>
+    );
+  };
+
+  export default App;
+  ```
+
 ## React.js Basic - Forms
