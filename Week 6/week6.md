@@ -340,6 +340,42 @@ Handling event pada React.js dapat dilakukan dengan menggunakan event listener. 
 
 ## React.js Basic - Life Cycle Method
 
+### Life Cycle Method pada React.js
+
+Life cycle method pada React.js adalah method yang akan dijalankan pada saat tertentu. Life cycle method pada React.js adalah method yang akan dijalankan pada saat mounting, updating, dan unmounting. Life cycle method pada React.js adalah method yang akan dijalankan pada saat mounting yaitu constructor, getDerivedStateFromProps, render, componentDidMount, dan getSnapshotBeforeUpdate. Life cycle method pada React.js adalah method yang akan dijalankan pada saat updating yaitu getDerivedStateFromProps, shouldComponentUpdate, render, getSnapshotBeforeUpdate, dan componentDidUpdate. Life cycle method pada React.js adalah method yang akan dijalankan pada saat unmounting yaitu componentWillUnmount.
+
+- contoh life cycle method pada React.js
+
+  ```javascript
+  import React, { Component } from "react";
+
+  class App extends Component {
+    constructor(props) {
+      super(props);
+      console.log("constructor");
+    }
+
+    componentDidMount() {
+      console.log("componentDidMount");
+    }
+
+    componentDidUpdate() {
+      console.log("componentDidUpdate");
+    }
+
+    componentWillUnmount() {
+      console.log("componentWillUnmount");
+    }
+
+    render() {
+      console.log("render");
+      return <h1>Hello, Ibnu Choldun</h1>;
+    }
+  }
+
+  export default App;
+  ```
+
 ## React.js Basic - Hooks
 
 ## React.js Basic - Forms
