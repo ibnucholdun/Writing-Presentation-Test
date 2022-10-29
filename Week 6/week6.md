@@ -296,6 +296,48 @@ Handling event pada React.js dapat dilakukan dengan menggunakan event listener. 
 
 ## React.js Basic - Conditional Rendering
 
+### Conditional Rendering pada React.js
+
+- contoh conditional rendering pada ReactJs menggunakan if else
+
+  ```javascript
+  import React from "react";
+
+  const App = () => {
+    const name = "Ibnu Choldun";
+
+    if (name === "Ibnu Choldun") {
+      return <h1>Hello, Ibnu Choldun</h1>;
+    } else {
+      return <h1>Hello, Guest</h1>;
+    }
+  };
+
+  export default App;
+  ```
+
+- contoh conditional rendering pada ReactJs menggunakan ternary operator
+
+  ```javascript
+  import React from "react";
+
+  const App = () => {
+    const name = "Ibnu Choldun";
+
+    return (
+      <div>
+        {name === "Ibnu Choldun" ? (
+          <h1>Hello, Ibnu Choldun</h1>
+        ) : (
+          <h1>Hello, Guest</h1>
+        )}
+      </div>
+    );
+  };
+
+  export default App;
+  ```
+
 ## React.js Basic - Life Cycle Method
 
 ## React.js Basic - Hooks
