@@ -197,6 +197,41 @@ State adalah sebuah object yang berisi data yang akan digunakan pada komponen. S
 
 ## React.js Basic - Styling
 
+### Styling pada React.js
+
+Styling pada React.js dapat dilakukan dengan menggunakan CSS, CSS Module, CSS in JS, dan Styled Component. Styling pada React.js dapat dilakukan dengan menggunakan inline styling, external styling, dan internal styling. Styling pada React.js dapat dilakukan dengan menggunakan class styling dan id styling. Styling pada React.js dapat dilakukan dengan menggunakan camelCase styling dan kebab-case styling. dan pemberian class styling pada React.js dapat dilakukan dengan menggunakan className.
+
+- contoh styling pada React.js
+
+  ```javascript
+  import React from "react";
+
+  const App = () => {
+    return (
+      <div>
+        <h1 style={{ color: "red" }}>Hello, Ibnu Choldun</h1>
+      </div>
+    );
+  };
+
+  export default App;
+  ```
+
+  ```javascript
+  import React from "react";
+  import "./App.css";
+
+  const App = () => {
+    return (
+      <div>
+        <h1 className="text-red">Hello, Ibnu Choldun</h1>
+      </div>
+    );
+  };
+
+  export default App;
+  ```
+
 ## React.js Basic - Handling Event
 
 ## React.js Basic - Conditional Rendering
