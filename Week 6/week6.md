@@ -423,3 +423,67 @@ Hooks pada React.js adalah function yang dapat digunakan pada functional compone
   ```
 
 ## React.js Basic - Forms
+
+### Forms pada React.js
+
+Forms pada React.js adalah form yang dapat digunakan untuk mengambil input dari user. Forms pada React.js adalah form yang dapat digunakan untuk mengambil input dari user menggunakan hooks. Forms pada React.js adalah form yang dapat digunakan untuk mengambil input dari user menggunakan hooks yaitu useState, useRef, dan useEffect.
+
+- contoh forms pada React.js method post menggunakan axios
+
+  ```javascript
+  import React, { useState } from "react";
+  import axios from "axios";
+
+  const App = () => {
+    const [name, setName] = useState("");
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+
+    const handleSubmit = (e) => {
+      e.preventDefault();
+
+      const data = {
+        name,
+        email,
+        password,
+      };
+
+      axios
+        .post("https://reqres.in/api/users", data)
+        .then((res) => {
+          console.log(res);
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    };
+
+    return (
+      <div>
+        <form onSubmit={handleSubmit}>
+          <input
+            type="text"
+            placeholder="Name"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+          />
+          <input
+            type="email"
+            placeholder="Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
+          <input
+            type="password"
+            placeholder="Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          />
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+    );
+  };
+
+  export default App;
+  ```
