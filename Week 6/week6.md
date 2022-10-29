@@ -44,6 +44,26 @@ JSX adalah sebuah sintaksis yang digunakan untuk membangun user interface pada R
 
 ## React.js Basic - Functional Component
 
+### Functional Component
+
+Functional component adalah sebuah komponen yang dibuat menggunakan function baik menggunakan function declaration, function expression maupun arrow function. Pada functional component menjalankan proses rendering menggunakan return statement yang mengembalikan sebuah JSX. pada functional component dapat menerima props sebagai parameter yang kemudian dapat digunakan pada JSX yang di return.
+
+- contoh functional component
+
+  ```javascript
+  import React from "react";
+
+  const App = () => {
+    return (
+      <div>
+        <h1>Hello, Ibnu CHolduhn</h1>
+      </div>
+    );
+  };
+
+  export default App;
+  ```
+
 ## React.js Basic - Props dan State
 
 ## React.js Basic - Styling
