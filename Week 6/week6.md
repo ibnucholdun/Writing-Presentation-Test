@@ -234,6 +234,66 @@ Styling pada React.js dapat dilakukan dengan menggunakan CSS, CSS Module, CSS in
 
 ## React.js Basic - Handling Event
 
+### Handling Event pada React.js
+
+Handling event pada React.js dapat dilakukan dengan menggunakan event listener. Handling event pada React.js dapat dilakukan dengan menggunakan event listener pada JSX. Handling event pada React.js dapat dilakukan dengan menggunakan event listener pada class component dan functional component menggunakan hooks. jenis event pada react js adalah onClick, onChange, onSubmit, onKeyPress dan lain-lain.
+
+- contoh handling event pada React.js
+
+  ```javascript
+  import React from "react";
+
+  const App = () => {
+    const handleClick = () => {
+      console.log("Hello, Ibnu Choldun");
+    };
+
+    return (
+      <div>
+        <button onClick={handleClick}>Click Me</button>
+      </div>
+    );
+  };
+
+  export default App;
+  ```
+
+  ```javascript
+  import React, { Component } from "react";
+
+  class App extends Component {
+    handleClick = () => {
+      console.log("Hello, Ibnu Choldun");
+    };
+
+    render() {
+      return (
+        <div>
+          <button onClick={this.handleClick}>Click Me</button>
+        </div>
+      );
+    }
+  }
+
+  export default App;
+  ```
+
+- contoh handling event pada React.js menggunakan hooks
+
+  ```javascript
+  import React, { useState } from "react";
+
+  const App = () => {
+    const [name, setName] = useState("Ibnu Choldun");
+
+    return (
+      <div>
+        <button onClick={() => setName("Ibnu Choldun 15")}>Click Me</button>
+      </div>
+    );
+  };
+  ```
+
 ## React.js Basic - Conditional Rendering
 
 ## React.js Basic - Life Cycle Method
