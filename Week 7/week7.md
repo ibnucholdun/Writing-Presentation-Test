@@ -5,7 +5,7 @@
 - [React.js Lanjutan - PropTypes](#reactjs-lanjutan---proptypes)
 - [React Router 6](#react-router-6)
 - [State Management - React Redux ](#state-management---react-redux)
-- [State Management - React Thunk](#state-management---react-thunk)
+- [State Management - Redux Thunk](#state-management---redux-thunk)
 
 ## React.js Lanjutan - PropTypes
 
@@ -533,4 +533,221 @@ State management adalah proses untuk mengatur data yang digunakan di aplikasi we
   ```
 
 
-## State Management - React Thunk
+## State Management - Redux Thunk
+
+Redux Thunk adalah state management yang digunakan untuk mengatur data yang digunakan di aplikasi web. Redux Thunk memiliki 3 komponen utama yaitu Store, Action, dan Reducer. Store digunakan untuk menyimpan data, Action digunakan untuk mengirimkan data ke Store, dan Reducer digunakan untuk mengubah data yang ada di Store. Redux thunk juga memiliki 2 komponen tambahan yaitu Middleware dan Action Creator. Middleware digunakan untuk memproses data yang dikirimkan oleh Action, dan Action Creator digunakan untuk mengirimkan data ke Store. Berikut adalah langkah-langkah untuk menginstall dan menggunakan React Thunk.
+
+- Install redux Thunk
+
+  ```bash
+  npm install redux react-redux redux-thunk
+  ```
+
+- Membuat Store
+
+  ```javascript
+  import { createStore, applyMiddleware } from 'redux';
+  import thunk from 'redux-thunk';
+
+  const initialState = {
+    counter: 0,
+  };
+
+  const reducer = (state = initialState, action) => {
+    return state;
+  };
+
+  const store = createStore(reducer, applyMiddleware(thunk));
+  ```
+
+- Membuat Action
+
+  ```javascript
+  import { createStore, applyMiddleware } from 'redux';
+  import thunk from 'redux-thunk';
+
+  const initialState = {
+    counter: 0,
+  };
+
+  const reducer = (state = initialState, action) => {
+    return state;
+  };
+
+  const store = createStore(reducer, applyMiddleware(thunk));
+
+  const increment = () => {
+    return {
+      type: 'INCREMENT',
+    };
+  };
+
+  const decrement = () => {
+    return {
+      type: 'DECREMENT',
+    };
+  };
+  ```
+
+- Membuat Action Creator
+
+  ```javascript
+  import { createStore, applyMiddleware } from 'redux';
+
+  const initialState = {
+    counter: 0,
+  };
+
+  const reducer = (state = initialState, action) => {
+    return state;
+  };
+
+  const store = createStore(reducer, applyMiddleware(thunk));
+
+  const increment = () => {
+    return {
+      type: 'INCREMENT',
+    };
+  };
+
+  const decrement = () => {
+    return {
+      type: 'DECREMENT',
+    };
+  };
+
+  const incrementAsync = () => {
+    return (dispatch) => {
+      setTimeout(() => {
+        dispatch(increment());
+      }, 1000);
+    };
+  };
+  ```
+
+- Membuat Reducer
+
+  ```javascript
+  import { createStore, applyMiddleware } from 'redux';
+
+  const initialState = {
+    counter: 0,
+  };
+
+  const reducer = (state = initialState, action) => {
+    switch (action.type) {
+      case 'INCREMENT':
+        return {
+          ...state,
+          counter: state.counter + 1,
+        };
+      case 'DECREMENT':
+        return {
+          ...state,
+          counter: state.counter - 1,
+        };
+      default:
+        return state;
+    }
+  };
+
+  const store = createStore(reducer, applyMiddleware(thunk));
+
+  const increment = () => {
+    return {
+      type: 'INCREMENT',
+    };
+  };
+
+  const decrement = () => {
+    return {
+      type: 'DECREMENT',
+    };
+  };
+
+  const incrementAsync = () => {
+    return (dispatch) => {
+      setTimeout(() => {
+        dispatch(increment());
+      }, 1000);
+    };
+  };
+  ```
+
+- Menggunakan React Thunk
+
+  ```javascript
+  import React from 'react';
+  import { createStore, applyMiddleware } from 'redux';
+
+  const initialState = {
+    counter: 0,
+  };
+
+  const reducer = (state = initialState, action) => {
+    switch (action.type) {
+      case 'INCREMENT':
+        return {
+          ...state,
+          counter: state.counter + 1,
+        };
+      case 'DECREMENT':
+        return {
+          ...state,
+          counter: state.counter - 1,
+        };
+      default:
+        return state;
+    }
+  };
+
+  const store = createStore(reducer, applyMiddleware(thunk));
+
+  const increment = () => {
+    return {
+      type: 'INCREMENT',
+    };
+  };
+
+  const decrement = () => {
+    return {
+      type: 'DECREMENT',
+    };
+  };
+
+  const incrementAsync = () => {
+    return (dispatch) => {
+      setTimeout(() => {
+        dispatch(increment());
+      }, 1000);
+    };
+  };
+
+  const App = () => {
+    return (
+      <Provider store={store}>
+        <div>
+          <h1>Counter</h1>
+          <Counter />
+          <Counter />
+        </div>
+      </Provider>
+    );
+  };
+
+  const Counter = () => {
+    const counter = useSelector((state) => state.counter);
+    const dispatch = useDispatch();
+
+    return (
+      <div>
+        <h2>{counter}</h2>
+        <button onClick={() => dispatch(increment())}>Increment</button>
+        <button onClick={() => dispatch(decrement())}>Decrement</button>
+        <button onClick={() => dispatch(incrementAsync())}>Increment Async</button>
+      </div>
+    );
+  };
+
+  export default App;
+  ```
