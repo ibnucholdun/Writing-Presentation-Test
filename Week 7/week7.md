@@ -294,4 +294,243 @@ export default App;
 
 ## State Management - React Redux
 
+State management adalah proses untuk mengatur data yang digunakan di aplikasi web. State management biasanya digunakan untuk mengatur data yang digunakan di banyak komponen. State management juga digunakan untuk mengatur data yang digunakan di komponen yang berada di lapisan yang berbeda. State management yang paling populer saat ini adalah Redux. Redux adalah state management yang digunakan untuk mengatur data yang digunakan di aplikasi web. Redux memiliki 3 komponen utama yaitu Store, Action, dan Reducer. Store digunakan untuk menyimpan data, Action digunakan untuk mengirimkan data ke Store, dan Reducer digunakan untuk mengubah data yang ada di Store. Berikut adalah contoh dan langkah-langkah penggunaan Redux dan react-redux pada React.js.
+
+- Instalasi Redux dan react-redux
+
+  ```bash
+  npm install redux react-redux
+  ```
+
+- Membuat Store
+
+  ```javascript
+  import { createStore } from 'redux';
+
+  const store = createStore(() => {});
+  ```
+
+- Membuat Reducer
+
+  ```javascript
+  import { createStore } from 'redux';
+
+  const initialState = {
+    counter: 0,
+  };
+
+  const reducer = (state = initialState, action) => {
+    return state;
+  };
+
+  const store = createStore(reducer);
+  ```
+
+- Membuat Action
+
+  ```javascript
+  import { createStore } from 'redux';
+
+  const initialState = {
+    counter: 0,
+  };
+
+  const reducer = (state = initialState, action) => {
+    return state;
+  };
+
+  const store = createStore(reducer);
+
+  const increment = () => {
+    return {
+      type: 'INCREMENT',
+    };
+  };
+
+  const decrement = () => {
+    return {
+      type: 'DECREMENT',
+    };
+  };
+
+  store.dispatch(increment());
+  store.dispatch(decrement());
+  ```
+
+- Membuat Reducer
+
+  ```javascript
+  import { createStore } from 'redux';
+
+  const initialState = {
+    counter: 0,
+  };
+
+  const reducer = (state = initialState, action) => {
+    switch (action.type) {
+      case 'INCREMENT':
+        return {
+          ...state,
+          counter: state.counter + 1,
+        };
+      case 'DECREMENT':
+        return {
+          ...state,
+          counter: state.counter - 1,
+        };
+      default:
+        return state;
+    }
+  };
+
+  const store = createStore(reducer);
+
+  const increment = () => {
+    return {
+      type: 'INCREMENT',
+    };
+  };
+
+  const decrement = () => {
+    return {
+      type: 'DECREMENT',
+    };
+  };
+
+  store.dispatch(increment());
+  store.dispatch(decrement());
+  ```
+
+- Membuat React Component
+
+  ```javascript
+  import React from 'react';
+  import { createStore } from 'redux';
+
+  const initialState = {
+    counter: 0,
+  };
+
+  const reducer = (state = initialState, action) => {
+    switch (action.type) {
+      case 'INCREMENT':
+        return {
+          ...state,
+          counter: state.counter + 1,
+        };
+      case 'DECREMENT':
+        return {
+          ...state,
+          counter: state.counter - 1,
+        };
+      default:
+        return state;
+    }
+  };
+
+  const store = createStore(reducer);
+
+  const increment = () => {
+    return {
+      type: 'INCREMENT',
+    };
+  };
+
+  const decrement = () => {
+    return {
+      type: 'DECREMENT',
+    };
+  };
+
+  store.dispatch(increment());
+  store.dispatch(decrement());
+
+  const App = () => {
+    return (
+      <div>
+        <h1>Counter</h1>
+        <h2>0</h2>
+        <button>Increment</button>
+        <button>Decrement</button>
+      </div>
+    );
+  };
+
+  export default App;
+  ```
+
+- Menggunakan React Redux
+
+  ```javascript
+  import React from 'react';
+  import { createStore } from 'redux';
+  import { Provider, useSelector, useDispatch } from 'react-redux';
+
+  const initialState = {
+    counter: 0,
+  };
+
+  const reducer = (state = initialState, action) => {
+    switch (action.type) {
+      case 'INCREMENT':
+        return {
+          ...state,
+          counter: state.counter + 1,
+        };
+      case 'DECREMENT':
+        return {
+          ...state,
+          counter: state.counter - 1,
+        };
+      default:
+        return state;
+    }
+  };
+
+  const store = createStore(reducer);
+
+  const increment = () => {
+    return {
+      type: 'INCREMENT',
+    };
+  };
+
+  const decrement = () => {
+    return {
+      type: 'DECREMENT',
+    };
+  };
+
+  store.dispatch(increment());
+  store.dispatch(decrement());
+
+  const App = () => {
+    return (
+      <Provider store={store}>
+        <div>
+          <h1>Counter</h1>
+          <Counter />
+          <Counter />
+        </div>
+      </Provider>
+    );
+  };
+
+  const Counter = () => {
+    const counter = useSelector((state) => state.counter);
+    const dispatch = useDispatch();
+
+    return (
+      <div>
+        <h2>{counter}</h2>
+        <button onClick={() => dispatch(increment())}>Increment</button>
+        <button onClick={() => dispatch(decrement())}>Decrement</button>
+      </div>
+    );
+  };
+
+  export default App;
+  ```
+
+
 ## State Management - React Thunk
