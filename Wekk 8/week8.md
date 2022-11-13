@@ -98,5 +98,102 @@ React Context adalah sebuah fitur yang memungkinkan kita untuk melakukan _data s
 
 ## React Context with useReducer
 
+React Context dengan `useReducer` adalah sebuah fitur yang memungkinkan kita untuk melakukan _data sharing_ antar komponen tanpa harus melewati _props_ secara langsung. React Context dengan `useReducer` dapat digunakan untuk menggantikan Redux, namun tidak disarankan untuk digunakan pada skala besar. 
+
+- ### Membuat Context dengan useReducer
+  
+    Untuk membuat sebuah Context dengan `useReducer`, kita dapat menggunakan `React.createContext()`.
+  
+    ```jsx
+    import React from 'react';
+  
+    const UserContext = React.createContext();
+    ```
+  
+    Pada contoh di atas, kita telah membuat sebuah Context bernama `UserContext`. Context ini dapat digunakan untuk menyimpan data yang akan digunakan oleh komponen-komponen yang berada di dalamnya.
+
+- ### Menggunakan Context dengan useReducer
+
+  Untuk menggunakan Context dengan `useReducer`, kita dapat menggunakan `Context.Provider` dan `useContext`.
+
+  ```jsx
+  import React, { useContext } from 'react';
+  import UserContext from './UserContext';
+
+  const User = () => {
+    const { user, setUser } = useContext(UserContext);
+
+    return (
+      <div>
+        <h1>{user.name}</h1>
+        <button onClick={() => setUser({ name: 'John Doe' })}>
+          Change User
+        </button>
+      </div>
+    );
+  };
+
+  export default User;
+  ```
+
+  Pada contoh di atas, kita telah membuat sebuah komponen bernama `User` yang akan menampilkan data user yang disimpan di Context. Komponen ini akan menggunakan `useContext` untuk mengakses data yang disimpan di Context.
+
+  ```jsx
+  import React, { useReducer } from 'react';
+  import UserContext from './UserContext';
+  import User from './User';
+
+  const initialState = { name: 'John Doe' };
+
+  const reducer = (state, action) => {
+    switch (action.type) {
+      case 'CHANGE_USER':
+        return { name: 'John Doe' };
+      default:
+        return state;
+    }
+  };
+
+  const App = () => {
+    const [user, dispatch] = useReducer(reducer, initialState);
+
+    return (
+      <UserContext.Provider value={{ user, dispatch }}>
+        <User />
+      </UserContext.Provider>
+    );
+  };
+
+  export default App;
+  ```
+
+  Pada contoh di atas, kita telah membuat sebuah komponen bernama `App` yang akan menyediakan data user yang disimpan di Context. Komponen ini akan menggunakan `useReducer` untuk menyediakan data yang disimpan di Context.
+
+  ```jsx
+  import React from 'react';
+  import App from './App';
+
+  const Root = () => {
+    return <App />;
+  };
+
+  export default Root;
+  ```
+
+  Pada contoh di atas, kita telah membuat sebuah komponen bernama `Root` yang akan menggunakan Context. Komponen ini akan menggunakan `useContext` untuk mengakses data yang disimpan di Context.
+
+  ```jsx
+  import React from 'react';
+  import Root from './Root';
+
+  const index = () => {
+    return <Root />;
+  };
+
+  export default index;
+  ```
+
+  Pada contoh di atas, kita telah membuat sebuah komponen bernama `index` yang akan menggunakan Context. Komponen ini akan menggunakan `useContext` untuk mengakses data yang disimpan di Context.
+
 ## React Testing (jest & RTL)
 
