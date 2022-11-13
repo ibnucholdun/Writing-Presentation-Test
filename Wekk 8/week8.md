@@ -197,3 +197,47 @@ React Context dengan `useReducer` adalah sebuah fitur yang memungkinkan kita unt
 
 ## React Testing (jest & RTL)
 
+React Testing adalah sebuah fitur yang memungkinkan kita untuk melakukan _testing_ pada komponen-komponen React. React Testing dapat digunakan untuk menguji komponen-komponen React secara _unit testing_ dan _integration testing_. react testing dapat menggunakan `jest` dan `react testing library`. Testing dapat dilakukan dengan menggunakan metode TDD (Test Driven Development)
+
+TDD atau Test Driven Development adalah sebuah metode pengembangan perangkat lunak yang memungkinkan kita untuk melakukan _testing_ terlebih dahulu sebelum melakukan _coding_. TDD memungkinkan kita untuk melakukan _testing_ terhadap komponen-komponen React dengan menggunakan metode `describe`, `it`, `expect`, dan `beforeEach`.
+
+- ### React testing menggunakan framework jest
+
+  Untuk melakukan _testing_ pada komponen-komponen React, kita dapat menggunakan framework `jest`. Untuk melakukan _testing_ pada komponen-komponen React, kita dapat menggunakan metode `describe`, `it`, `expect`, dan `beforeEach`.
+
+  ```jsx
+  import React from 'react';
+  import { render, screen } from '@testing-library/react';
+  import App from './App';
+
+  describe('App', () => {
+    beforeEach(() => {
+      render(<App />);
+    });
+
+    it('should render App', () => {
+      expect(screen.getByText('Hello World')).toBeInTheDocument();
+    });
+  });
+  ```
+
+  Pada contoh di atas, kita telah membuat sebuah komponen bernama `App` yang akan melakukan _testing_ terhadap komponen `App`. Komponen ini akan menggunakan metode `describe`, `it`, `expect`, dan `beforeEach` untuk melakukan _testing_ terhadap komponen `App`.
+
+- ### React testing menggunakan react testing library
+  
+    Untuk melakukan _testing_ pada komponen React menggunakan `react testing library`, kita dapat menggunakan `render()` untuk melakukan _rendering_ pada komponen React.
+    
+    ```jsx
+    import React from 'react';
+    import { render, screen } from '@testing-library/react';
+    import App from './App';
+    
+    test('renders learn react link', () => {
+      render(<App />);
+      const linkElement = screen.getByText(/learn react/i);
+      expect(linkElement).toBeInTheDocument();
+    });
+    ```
+    
+    Pada contoh di atas, kita telah membuat sebuah _test case_ yang akan melakukan _testing_ pada komponen `App`. Komponen ini akan melakukan _rendering_ pada komponen `App` dan melakukan _assertion_ pada komponen `App` dengan menggunakan `render()`.
+
